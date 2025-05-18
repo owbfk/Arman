@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Product from '../types';
+import Product from '../../types';
+import NavBar from '../../components/NavBar/NavBar';
 
 const ProductPage: React.FC = () => {
   const { id } = useParams();
@@ -23,6 +24,7 @@ const ProductPage: React.FC = () => {
 
   return(
     <>
+      <NavBar></NavBar>
       {loading ? (
         <p>Loading...</p>
       ) : (
